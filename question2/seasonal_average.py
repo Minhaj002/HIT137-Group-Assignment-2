@@ -1,3 +1,4 @@
+
 # Function for Seasonal Averages
 def temp_average(data):
     # Figure out the average for each season
