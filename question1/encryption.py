@@ -6,3 +6,7 @@ def encrypt(shift1, shift2):
     
     text = raw_file.read() #read content 
     new_ch = "" #init string
+
+#loop to read file content
+    for ch in text:
+        if ch.isalpha(): #check if alphabet
