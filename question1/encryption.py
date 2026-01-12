@@ -20,3 +20,8 @@ def encrypt(shift1, shift2):
                 key = shift1 * shift2 #shift rule for lowercase first half
                 new_index = (index + key) % 13 #module 13 to ensure rule applies to alphabet-half
                 new_ch += chr(new_index + base) #encrypted text
+
+        # lowercase n-z conditions
+            elif ch.islower() and 'n' <= ch <= 'z':
+                base = ord('n')
+                index = ord(ch) - base
