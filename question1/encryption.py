@@ -16,3 +16,5 @@ def encrypt(shift1, shift2):
             if ch.islower() and 'a' <= ch <= 'm':
                 #base and index to keep within limits
                 base = ord('a') 
+                index = ord(ch) - base 
+                key = shift1 * shift2
