@@ -1,3 +1,4 @@
+
 #Encryption function
 def encrypt(shift1, shift2):
     
@@ -10,3 +11,8 @@ def encrypt(shift1, shift2):
 #loop to read file content
     for ch in text:
         if ch.isalpha(): #check if alphabet
+        
+         # lowercase a-m conditions
+            if ch.islower() and 'a' <= ch <= 'm':
+                #base and index to keep within limits
+                base = ord('a') 
