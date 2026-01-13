@@ -26,3 +26,6 @@ def main():
     sides = int(input("Number of polygon sides: "))
      length = int(input("Length of each side: "))
     depth = int(input("Recursion depth: "))
+
+    turtle.speed("fastest")
+    turtle.hideturtle()
