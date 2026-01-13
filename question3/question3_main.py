@@ -21,3 +21,6 @@ def draw_polygon(sides, length, depth):
     for _ in range(sides):
            draw_fractal_edge(length, depth)
         turtle.left(angle)
+
+def main():
+    sides = int(input("Number of polygon sides: "))
