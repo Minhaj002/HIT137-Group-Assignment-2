@@ -1,18 +1,21 @@
-#Assignment 2 Question 3
-#import required modules from library
-import turtle as t
+import turtle
 import math
 
-#Draw one edge using recursion
-def draw_edge(length, depth):
+# Draw one fractal edge using recursion
+def draw_fractal_edge(length, depth):
     if depth == 0:
-        t.forward(length)
+        turtle.forward(length)
     else:
-        segment = length / 3 # Divide the length into three segments
-        draw_edge(segment, depth - 1)
-        t.left(60)
-        draw_edge(segment, depth - 1)
-        t.right(120)
-        draw_edge(segment, depth - 1)
-        t.left(60)
-        draw_edge(segment, depth - 1)
+        part = length / 3
+        draw_fractal_edge(part, depth - 1)
+        turtle.left(60)
+        draw_fractal_edge(part, depth - 1)
+        turtle.right(120)
+        draw_fractal_edge(part, depth - 1)
+        turtle.left(60)
+        draw_fractal_edge(part, depth - 1)
+
+# Draw the complete fractal polygon
+def draw_polygon(sides, length, depth):
+    angle = 360 / sides
+    for _ in range(sides):
