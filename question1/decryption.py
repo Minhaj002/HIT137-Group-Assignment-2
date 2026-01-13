@@ -19,3 +19,10 @@ def decrypt(shift1, shift2):
                 key = shift1 * shift2 #shift rule for lowercase first half
                 old_index = (index - key) % 13 #inverse of encryption see encryption.py 
                 old_ch += chr(old_index + base) #decrypted text
+            # uppercase A-M
+            elif ch.isupper() and 'A' <= ch <= 'M':
+                base = ord('A')
+                index = ord(ch) - base
+                key = shift1 #shift condition for uppercase first half
+                old_index = (index + key) % 13
+                old_ch += chr(old_index + base)
