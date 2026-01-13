@@ -19,12 +19,12 @@ def draw_fractal_edge(length, depth):
 def draw_polygon(sides, length, depth):
     angle = 360 / sides
     for _ in range(sides):
-           draw_fractal_edge(length, depth)
+        draw_fractal_edge(length, depth)
         turtle.left(angle)
 
 def main():
     sides = int(input("Number of polygon sides: "))
-     length = int(input("Length of each side: "))
+    length = int(input("Length of each side: "))
     depth = int(input("Recursion depth: "))
 
     turtle.speed("fastest")
