@@ -25,3 +25,6 @@ def encrypt(shift1, shift2):
             elif ch.islower() and 'n' <= ch <= 'z':
                 base = ord('n')
                 index = ord(ch) - base
+                key = shift1 + shift2 #shift rule for lowercase second half
+                new_index = (index - key) % 13
+                new_ch += chr(new_index + base)
