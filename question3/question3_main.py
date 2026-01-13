@@ -29,3 +29,6 @@ def main():
 
     turtle.speed("fastest")
     turtle.hideturtle()
+
+ # Position turtle near the center
+    radius = length / (2 * math.sin(math.pi / sides))
