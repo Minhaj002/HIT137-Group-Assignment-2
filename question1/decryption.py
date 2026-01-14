@@ -35,3 +35,17 @@ def decrypt(shift1, shift2):
                 key = shift1 #shift condition for uppercase first half
                 old_index = (index + key) % 13
                 old_ch += chr(old_index + base)
+
+            # uppercase N-Z
+            elif ch.isupper() and 'N' <= ch <= 'Z':
+                base = ord('N')
+                index = ord(ch) - base
+                key = shift2 ** 2 #shift condition for uppercase second half
+                old_index = (index - key) % 13
+                old_ch += chr(old_index + base)
+
+        else:
+            old_ch += ch #store decrypted content
+        
+    decrypted_file.write(old_ch) #write decrypted content to file
+
