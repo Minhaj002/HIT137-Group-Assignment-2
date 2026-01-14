@@ -1,6 +1,8 @@
 import turtle
 import math
 
+import turtle as t
+
 # Draw one fractal edge using recursion
 def draw_fractal_edge(length, depth):
     if depth == 0:
@@ -42,3 +44,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+t.screen.mainloop()
