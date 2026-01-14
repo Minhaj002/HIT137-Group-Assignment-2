@@ -32,3 +32,5 @@ def main():
 
  # Position turtle near the center
     radius = length / (2 * math.sin(math.pi / sides))
+    turtle.penup()
+    turtle.setpos(-length / 2, -radius / 3)
