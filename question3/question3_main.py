@@ -40,7 +40,7 @@ def main():
 
     t.done()
     
-if __name__ == "__main__":
+    if __name__ == "__main__":
     main()
 
 t.screen.mainloop()
