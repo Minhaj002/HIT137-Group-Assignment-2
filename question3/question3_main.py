@@ -30,20 +30,15 @@ def main():
     turtle.speed("fastest")
     turtle.hideturtle()
 
-  # Position turtle near the center
+    # Position turtle near the center
     radius = length / (2 * math.sin(math.pi / sides))
-    t.penup()
-    t.setpos(-length / 2, -radius / 3)
-    t.pendown()
+    turtle.penup()
+    turtle.setpos(-length / 2, -radius / 3)
+    turtle.pendown()
 
     draw_polygon(sides, length, depth)
 
-    t.done()
-    
- if __name__ == "__main__":
+    turtle.done()
+
+if __name__ == "__main__":
     main()
-
-t.screen.mainloop()
-
-
-
