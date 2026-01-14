@@ -28,3 +28,9 @@ def encrypt(shift1, shift2):
                 key = shift1 + shift2 #shift rule for lowercase second half
                 new_index = (index - key) % 13
                 new_ch += chr(new_index + base)
+
+        # uppercase A-M conditions
+            elif ch.isupper() and 'A' <= ch <= 'M':
+                base = ord('A')
+                index = ord(ch) - base
+                key = shift1 #shift rule for uppercase first half
