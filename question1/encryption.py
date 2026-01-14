@@ -42,3 +42,9 @@ def encrypt(shift1, shift2):
                 base = ord('N')
                 index = ord(ch) - base
                 key = shift2 ** 2 #shift rule for uppercase second half
+                new_index = (index + key) % 13
+                new_ch += chr(new_index + base)
+        else: 
+            new_ch += ch #store non-alphabet characters
+
+    encrypted_file.write(new_ch) #write encrypted content to file 
